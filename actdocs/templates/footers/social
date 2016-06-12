@@ -1,0 +1,9 @@
+<h3>Barcelona.pm:</h3>
+<ul class="list-group">
+  <li class="list-group-item"><i class="fa fa-home"></i> <a href="http://barcelona.pm">Home page</a></li>
+  <li class="list-group-item"><i class="fa fa-envelope"></i> <a href="http://mail.pm.org/mailman/listinfo/barcelona-pm">Distribution list</a></li>
+  <li class="list-group-item"><i class="fa fa-calendar"></i> <a href="http://www.meetup.com/barcelonapm/">Meetup</a></li>
+  <li class="list-group-item"><i class="fa fa-twitter"></i> <a href="http://twitter.com/barcelonapm/">Twitter</a></li>
+  <li class="list-group-item"><i class="fa fa-github"></i> <a href="http://github.com/barcelonapm/">Github</a></li>
+</ul>
+

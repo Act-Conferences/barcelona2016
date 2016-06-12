@@ -1,0 +1,6 @@
+<ul class="list-group">
+  <li class="list-group-item text-center">
+    Powered by <a href="http://act.mongueurs.net/">Act</a> (A Conference Toolkit),
+    <a href="http://getbootstrap.com/">Bootstrap</a> and Bootswatch's <a href="http://bootswatch.com/journal/">Journal</a> template.
+  </li>
+</ul>

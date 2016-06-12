@@ -1,0 +1,201 @@
+body {
+    font-size: 18px;
+    background-color: #fafafa;
+}
+
+@media(max-width:767px) {
+  .pattern {
+      padding-top: 30px !important;
+  }
+
+  .pattern h1 {
+      font-size: 50px !important;
+  }
+
+  .pattern .dates {
+      font-size: 24px !important;
+  }
+}
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+  text-transform: none;
+  font-size: 1.2em;
+  font-weight: normal;
+  padding-top: 21px;
+}
+.with-banner .navbar-brand {
+    display: none;
+}
+
+.navbar-default {
+    border-radius: 0;
+    background-color: #5aadbb;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 1px solid #6abdcb;
+    margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,
+.dropdown-menu>li>a,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar{
+    background-color: #5aadbb;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #3071a9;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: #fff;
+    color: #5aadbb;
+}
+
+.navbar-default .dropdown-menu {
+    background-color: #5aadbb;
+}
+
+.dropdown-menu .divider {
+    background-color: #6abdcb;
+}
+
+.pattern {
+    background-color:#5aadbb;
+    width:100%;
+    margin-top:-20px;
+    padding-top:60px;
+    padding-bottom:40px;
+    color: #fff;
+}
+
+.pattern .container {
+    text-align:center;
+}
+
+.pattern .container p.dates {
+   font-size: 36px;
+   color: #fff;
+   margin-top 30px;
+   margin-bottom: 60px;
+   font-family: "News Cycle","Arial Narrow Bold",sans-serif
+}
+
+.pattern .container h1 {
+   font-size: 68px;
+   color: #fff;
+   font-weight: normal;
+   font-family: 'Lobster', cursive;
+}
+
+.pg-separator {
+    background-color: #5aadbb;
+    color: #fff;
+    margin-top:-20px;
+    padding: 65px 15px 40px 15px;
+}
+
+.pg-separator h1 {
+    font-size: 54px;
+    line-height: 1;
+    margin-top:0;
+    color: white;
+}
+
+.pg-separator p {
+    margin-right: 380px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.main-content {
+    padding-top: 50px;
+}
+
+.event-description {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.event-description h2 {
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #5aadbb;
+    color: #000;
+}
+
+.holder {
+    margin-top: 20px;
+}
+
+.table .act-description label {
+  display: inline;
+}
+
+/*~------------------------------------------------------------------*/
+/* Timetable colours                                                 */
+/*~------------------------------------------------------------------*/
+.table-schedule td.center {
+  text-align: center;
+}
+.table-schedule td {
+  border: 0 !important;
+}
+.venue .alert {
+  background-color: #FFCC00;
+}
+.out .alert {
+  background-color: #EEEEEE;
+}
+.r1 .alert {
+  background-color: #FFD3D3;
+}
+.r2 .alert {
+  background-color: #D3FFD3;
+}
+.r3 .alert {
+  background-color: #D3D3FF;
+}
+.r4 .alert {
+  background-color: #FFFFD3;
+}
+.r5 .alert {
+  background-color: #D3FFFF;
+}
+.mtbutton {
+  cursor:pointer;
+  vertical-align: middle;
+}
+.starcount {
+  font-size: small;
+}

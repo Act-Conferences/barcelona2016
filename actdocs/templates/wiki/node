@@ -1,0 +1,51 @@
+[% WRAPPER ui title = loc('Wiki - <node>', node) %]
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    [% content %]
+  </div>
+  <div class="panel-footer">
+<p>
+ [% IF version OR data.last_modified;
+    IF version %]
+  {{version}} [% version %]
+  {{saved on}}
+    [% ELSE %]
+  {{Last modified:}}
+    [% END %]
+  [% date_format(data.last_modified, 'datetime_short') %]
+  {{by}}
+  [% user_info( author ) %]
+ [% ELSE %]
+  {{new page}}
+ [% END %]
+</p>
+[% showtags(tags, 'wiki', [ [ 'node', node ] ] ) UNLESS version OR NOT data.last_modified %]
+<p>
+<a href="[% make_uri('wiki') %]">{{Home}}</a>
+|
+[% IF version %]
+   [% IF global.request.user.is_wiki_admin %]
+    <a href="[% make_uri('wikiedit', 'action', 'revert', 'node', node, 'version', version) %]">{{Revert to this version}}</a>
+    |
+   [% END %]
+[% ELSE %]
+  <a href="[% make_uri('wikiedit', 'action', 'edit', 'node', node) %]">{{Edit this page}}</a>
+  |
+[% END %]
+[% IF alltags.size %]
+<a href="[% make_uri('wiki', 'action', 'tags') %]">{{Tags}}</a>
+|
+[% END %]
+<a href="[% make_uri('wiki', 'action', 'recent') %]">{{Recent changes}}</a>
+[% IF data.version %]
+|
+<a href="[% make_uri('wiki', 'action', 'history', 'node', node) %]">{{History}}</a>
+[% END %]
+</p>
+  </div>
+</div>
+
+
+
+[% END %]

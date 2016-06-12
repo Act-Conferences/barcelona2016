@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Language" content="[% global.request.language %]" />
+    <meta property="og:site_name" content="[% global.conference.name %]"/>
+    <meta property="og:title" content="[% IF title %][% title %][% ELSE %][% global.conference.name %][% END %]" />
+    <meta property="og:url" content="[% global.request.base_url %][% global.request.r.uri %]" />
+    <meta property="og:description" content="A one-day conference with all-level related talks, with a grain of Perl." />
+    <meta property="og:image" content="[% global.request.base_url %][% make_uri_info('img', 'og-image.jpg') %]" />
+    <!-- OpenId -->
+    [% IF openid %]
+    <link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
+    [% END %]
+    <link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]" href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
+    <title>[% global.conference.name %][% IF title %] | [% title  %][% END %]</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.journal.min.css') %]" />
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'sponsors.css') %]" />
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body [% IF banner %] class="with-banner" [% END %]>
+    <div class="navbar navbar-default navbar-static-top" id="main-menu" role="navigation">
+      [% PROCESS menu %]
+    </div>
+
+    [% IF banner %]
+      <main class="pattern" role="main">
+        <div class="container">
+          <h1>Barcelona <br />Perl Workshop 2015</h1>
+          <p class="lead dates">Saturday 7th November</p>
+          <p>
+            <a href="[% make_uri('newtalk') %]" class="btn btn-primary btn-lg">Submit a talk <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="[% make_uri('register') %]" class="btn btn-primary btn-lg">Register <span class="glyphicon glyphicon-chevron-right"></span></a>
+          </p>
+        </div>
+      </main>
+      [% PROCESS sponsors %]
+    [% ELSE %]
+      <main class="pg-separator" role="banner">
+        <div class="container">
+          <h1>[% page_title || title %]</h1>
+          [% IF page_description %]
+          <p>[% page_description %]</p>
+          [% END %]
+        </div>
+      </main>
+    [% END %]
+
+    <div class="main-content container">
+      [% content %]
+    </div>
+
+    <footer class="bs-docs-footer" role="contentinfo">
+      [% IF !banner %]
+        [% PROCESS sponsors %]
+      [% END %]
+
+      [% PROCESS footer %]
+    </footer>
+    <script src="[% make_uri_info('js', 'bootstrap.min.js') %]"></script>
+    <!-- ACT base stuff
+    <link rel="stylesheet" type="text/css" href="/css/act-base.css" />
+    <link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+    <script type="text/javascript" src="/js/act.js"></script>
+    -->
+  </body>
+</html>

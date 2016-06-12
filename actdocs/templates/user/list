@@ -1,0 +1,49 @@
+<p>{{Committed users are listed in <b>bold</b> type}}</p>
+
+[% IF users.size %]
+  <table class="table" id="user-list">
+    <tr>
+     <th>{{Name}}</th>
+     <th>{{City}}</th>
+     <th>{{Country}}</th>
+     <th>{{Monger group}}</th>
+     [% IF global.request.user.is_users_admin %]
+     <th>{{Email}}</th>
+     [% END %]
+    </tr>
+    [% FOREACH u=users %]
+     <tr>
+       <td>
+        [% "<strong>" IF u.committed %][% user_info(u) %][% "</strong>" IF u.committed %]
+        [% IF u.photo_name %]
+        <img src="/images/photo.png" alt="photo" title="photo" width="12" height="12" />
+        [% END %]
+       </td>
+       <td>
+          [%- IF u.town %]
+             [% u.town %]
+          [%- ELSE %]
+             &nbsp;
+          [% END %]
+       </td>
+       <td>
+          [% countries_iso.${u.country} %]
+       </td>
+       <td>
+          [%- IF u.pm_group %]
+             [% IF u.pm_group_url %]<a href="[% u.pm_group_url %]">[% END %]
+             [%- u.pm_group -%]
+             [%- IF u.pm_group_url %]</a>[% END %]
+          [% ELSE %]
+             &nbsp;
+          [% END %]
+       </td>
+       [% IF global.request.user.is_users_admin %]
+       <td>
+        <a href="mailto:[% u.email %]">[% u.email %]</a>
+       </td>
+       [% END %]
+    </tr>
+    [% END %]
+  </table>
+[% END %]
