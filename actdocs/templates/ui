@@ -40,15 +40,15 @@
     [% IF banner %]
       <main class="pattern" role="main">
         <div class="container">
-          <h1>Barcelona <br />Perl Workshop 2015</h1>
-          <p class="lead dates">Saturday 7th November</p>
+          <h1>Barcelona <br />Perl Workshop 2016</h1>
+          <p class="lead dates">Saturday 5th November</p>
           <p>
             <a href="[% make_uri('newtalk') %]" class="btn btn-primary btn-lg">Submit a talk <span class="glyphicon glyphicon-chevron-right"></span></a>
             <a href="[% make_uri('register') %]" class="btn btn-primary btn-lg">Register <span class="glyphicon glyphicon-chevron-right"></span></a>
           </p>
         </div>
       </main>
-      [% PROCESS sponsors %]
+      [%# PROCESS sponsors %]
     [% ELSE %]
       <main class="pg-separator" role="banner">
         <div class="container">
