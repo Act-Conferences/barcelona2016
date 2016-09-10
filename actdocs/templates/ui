@@ -19,14 +19,21 @@
     <link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]" href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
     <title>[% global.conference.name %][% IF title %] | [% title  %][% END %]</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.journal.min.css') %]" />
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" />
+    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'general.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'sponsors.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Owl-Carousel -->
+    <link href="[% make_uri_info('css', 'custom.css') %]" rel="stylesheet">
+    <link href="[% make_uri_info('css', 'owl.carousel.css') %]" rel="stylesheet">
+    <link href="[% make_uri_info('css', 'owl.theme.css') %]" rel="stylesheet">
+    <link href="[% make_uri_info('css', 'style.css') %]" rel="stylesheet">
+    <link href="[% make_uri_info('css', 'animate.css') %]" rel="stylesheet">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css"> 
+	  <script src="[% make_uri_info('js', 'modernizr-2.8.3.min.js') %]"></script>  <!-- Modernizr /-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -73,11 +80,28 @@
 
       [% PROCESS footer %]
     </footer>
-    <script src="[% make_uri_info('js', 'bootstrap.min.js') %]"></script>
-    <!-- ACT base stuff
-    <link rel="stylesheet" type="text/css" href="/css/act-base.css" />
-    <link rel="stylesheet" type="text/css" href="/css/schedule.css" />
-    <script type="text/javascript" src="/js/act.js"></script>
-    -->
+    <script src="[% make_uri_info('js', 'jquery-1.10.2.js') %]"></script>
+    <script src="[% make_uri_info('js', 'bootstrap.js') %]"></script>
+    <script src="[% make_uri_info('js', 'owl.carousel.js') %]"></script>
+    <script src="[% make_uri_info('js', 'script.js') %]"></script>
+    <!-- StikyMenu -->
+    <script src="[% make_uri_info('js', 'stickUp.min.js') %]"></script>
+    <script type="text/javascript">
+      jQuery(function($) {
+        $(document).ready( function() {
+          $('.navbar-default').stickUp();
+        });
+      });
+    </script>
+    <!-- Smoothscroll -->
+    <script type="text/javascript" src="[% make_uri_info('js', 'jquery.corner.js') %]"></script> 
+    <script src="[% make_uri_info('js', 'wow.min.js') %]"></script>
+    <script>
+     new WOW().init();
+    </script>
+    <script src="[% make_uri_info('js', 'classie.js') %]"></script>
+    <script src="[% make_uri_info('js', 'uiMorphingButton_inflow.js') %]"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="[% make_uri_info('js', 'jquery.magnific-popup.js') %]"></script> 
   </body>
 </html>
