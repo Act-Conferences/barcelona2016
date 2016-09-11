@@ -47,16 +47,11 @@
     [% IF main %]
 			[% content %]
     [% ELSE %]
-		  <div class="content-section-a">
-			  <div class="container">
-					<h1 class="h1_home">[% page_title || title %]</h1>
-					[% IF page_description %]
-					<p>[% page_description %]</p>
-					[% END %]
-				</div>
-			</div>
-			<div class="main-content">
-				[% content %]
+			[% PROCESS index/menu %]
+		  <div class="content-section-b">
+        <div class="container">
+				  [% content %]
+			  </div>
 			</div>
     [% END %]
 
