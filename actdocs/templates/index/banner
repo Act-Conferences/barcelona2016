@@ -1,0 +1,13 @@
+<div class="intro-header">
+  <div class="col-xs-12 text-center abcen1">
+    <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Saturday 5th November 2016</h3>
+    <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Barcelona Perl Workshop</h1>
+    <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">A free one-day conference for Perl geeks and friends</h3>
+  </div>    
+
+  <div class="col-xs-12 text-center abcen fadeIn">
+    <div class="button_down "> 
+      <a class="imgcircle" href="#home"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+    </div>
+  </div>
+</div>

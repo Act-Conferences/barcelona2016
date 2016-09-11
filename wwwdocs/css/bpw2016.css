@@ -1,0 +1,46 @@
+.hearth {
+  color: #e74c3c;
+}
+.content-section-b .well {
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+}
+
+.sponsor-space {
+  margin-bottom: 30px;
+}
+
+a.sponsor {
+  display: block;
+  background-image: url("../img/sponsors-2015.png");
+  background-repeat: no-repeat;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 275px;
+  height: 100px;
+  border: 0;
+  text-decoration: none;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+a.sponsor:hover {
+  background-image: url("../img/sponsors-2015.png");
+  opacity: 1;
+}
+
+.sponsor.sysdivision {
+  background-position: 0 8px;
+}
+
+.sponsor.soysuper {
+  background-position: 0 -98px;
+}
+
+.sponsor.capside {
+  background-position: 0 -198px;
+}
+
+.sponsor.upc {
+  background-position: 0px -300px;
+}
