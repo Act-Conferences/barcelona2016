@@ -1,3 +1,11 @@
+a {
+  font-weight: bold;
+}
+
+.footer-banner a {
+  text-decoration: none;
+}
+
 .hearth {
   color: #e74c3c;
 }
