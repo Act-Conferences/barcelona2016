@@ -1,0 +1,82 @@
+[% WRAPPER ui nowrap = 1%]
+  <div class="content-section-b">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+          <h2>Welcome</h2>
+          <p class="lead" style="margin-top:0">
+            {{This is your personal page.}}
+            [% loc("to <this conference>", global.conference.name) %]
+          </p>
+        </div>
+         
+        <div class="col-sm-4 wow fadeInDown text-center">
+          <a href="[% make_uri('change') %]">
+            <img class="rotate" src="img/icon/pencil.svg" alt="Update">
+            <h4>Update your information</h4>
+          </a>
+        </div>
+            
+        <div class="col-sm-4 wow fadeInDown text-center">
+          <a href="[% make_uri('photo') %]">
+            <img  class="rotate" src="img/icon/polaroid.svg" alt="Photo">
+            <h4>Manage your photo</h4>
+          </a>
+        </div>        
+
+        <div class="col-sm-4 wow fadeInDown text-center">
+          <a href="[% make_uri('changepwd') %]">
+            <img class="rotate" src="img/icon/bank.svg" alt="Password">
+            <h4>Change your password</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  [% IF talks.size %]
+    <div class="content-section-c">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-section-c">
+              <div class="panel-heading">
+                Your Talks
+              </div>
+              
+              <table class="table">
+                [% FOREACH t = talks %]
+                  <tr class="lead">
+                    <td>
+                      [% IF t.confirmed %]
+                        <span class="label label-success">{{confirmed}}</span>
+                      [% ELSIF t.accepted %]
+                        <span class="label label-info">{{Accepted}}</span>
+                      [% ELSE %]
+                        <span class="label label-warning">{{Pending}}</span>
+                      [% END %]
+                    </td>
+                    <td>
+                      [% talk_link(t) %]
+                    </td>
+                    <td>
+                      [% IF t.duration ; t.duration %]
+                      {{minutes}}[% ELSE %]{{Lightning talk}}[% END %]
+                    </td>
+                    <td>
+                      [% talk_modify_link(t) %]
+                    </td>
+                  </tr>
+                [% END %]
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  [% END %]
+
+  <div class="content-section-a">
+    [% PROCESS submit_talk %]
+  </div>
+[% END %]
