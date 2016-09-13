@@ -44,15 +44,20 @@
     <![endif]-->
   </head>
   <body [% IF banner %] class="with-banner" [% END %]>
-    [% IF main %]
-			[% content %]
+    [% IF banner %]
+      [% PROCESS banner %]
+    [% END %]
+
+		[% PROCESS menu %]
+
+    [% IF nowrap %]
+	    [% content %]
     [% ELSE %]
-			[% PROCESS index/menu %]
-		  <div class="content-section-b">
+      <div class="content-section-b">
         <div class="container">
-				  [% content %]
-			  </div>
-			</div>
+	        [% content %]
+        </div>
+      </div>
     [% END %]
 
     [% PROCESS footer %]

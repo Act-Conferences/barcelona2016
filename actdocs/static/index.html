@@ -1,13 +1,10 @@
-[% WRAPPER ui main = 1 %]
-  [% PROCESS index/banner %]
-	[% PROCESS index/menu %]
-	
+[% WRAPPER ui banner = 1 nowrap = 1 %]
   <div id="home" class="content-section-b" style="border-top: 0">
     [% PROCESS index/whatis %]
   </div>
 	
   <div id="talks" class="content-section-a">
-    [% PROCESS index/call_for_speakers %]
+    [% PROCESS submit_talk %]
   </div>
 
 	<div id="sponsors" class="content-section-c white">
