@@ -14,16 +14,6 @@ $(window).load(function() {
 })
 
 $(document).ready(function() {
-		//animated logo
-		$(".navbar-brand").hover(function () {
-			$(this).toggleClass("animated shake");
-		});
-		
-		//animated scroll_arrow
-		$(".img_scroll").hover(function () {
-			$(this).toggleClass("animated infinite bounce");
-		});
-		
 		//Wow Animation DISABLE FOR ANIMATION MOBILE/TABLET
 		wow = new WOW(
 		{
