@@ -30,6 +30,18 @@
             <h4>Change your password</h4>
           </a>
         </div>
+
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <span class="lead container">
+            [% IF global.request.user.has_registered %]
+              You are registered to attend the conference. If you're not planning to attend you can always
+              <a href="[% make_uri('unregister') %]">[% loc("unregister from <this conference>", global.conference.name) %]</a>.
+            [% ELSE %]
+              Hey! you are <b>not</b> registered. If you want to attend make sure
+              you <a href="[% make_uri('register') %]">{{register for this conference}}</a>.
+            [% END %]
+          </span>
+        </div>
       </div>
     </div>
   </div>
