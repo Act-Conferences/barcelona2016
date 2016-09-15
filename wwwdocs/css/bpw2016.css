@@ -1,33 +1,47 @@
-.sponsor-container {
-  background-color: #333;
-  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
-}
-.sponsor-list {
-  text-align: left;
-  min-height: 120px;
-  padding: 5px 0 0 0;
+a {
+  font-weight: bold;
 }
 
-.sponsor-list h2{
+.footer-banner a {
+  text-decoration: none;
+}
+
+.hearth {
+  color: #e74c3c;
+}
+.content-section-b .well {
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+}
+
+.panel {
+  border-radius: 0;
+  border: 0;
+}
+
+.panel-heading {
+  border-radius: 0;
   text-align: center;
-  font-size: 26px;
-  display: block;
-  font-family: "News Cycle","Arial Narrow Bold",sans-serif;
   font-weight: bold;
+  font-size: 1.5em;
+}
+
+.panel-section-c .panel-heading {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
   color: #fff;
 }
 
-.sponsor-space {
-  text-align: center;
-  margin: 30px 0;
+.panel .table td {
+  padding: 20px;
 }
 
-.sponsor-list .join {
-  padding-top: 10px;
+.sponsor-space {
+  margin-bottom: 30px;
 }
 
 a.sponsor {
-  display: inline-block;
+  display: block;
   background-image: url("../img/sponsors-2015.png");
   background-repeat: no-repeat;
   text-indent: -9999em;
@@ -37,6 +51,7 @@ a.sponsor {
   border: 0;
   text-decoration: none;
   opacity: 1;
+  margin-bottom: 20px;
 }
 
 a.sponsor:hover {

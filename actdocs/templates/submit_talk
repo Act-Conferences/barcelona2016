@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 pull-right wow fadeInRightBig">
+      <img class="img-responsive" width="100%" src="img/icon/mic.svg" alt="">
+    </div>
+        
+    <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
+      <h2 class="section-heading">Submit a talk!</h2>
+      <div class="sub-title lead3">
+		We're finishing up the schedule, but there's still time to submit talks
+	  </div>
+      <p class="lead">
+		We'll have some really good and experienced speakers but we'd really 
+		<span class="hearth">♥</span> to give the opportunity to more people to talk
+		about something they like.
+      </p>
+      <p class="lead">
+		You might think that you have nothing to talk about. Think twice. What you
+		take for granted might be unknown for others. 
+      </p>
+      <p class="lead">
+		Stay tunned, we'll start publishing the first talks shortly.
+      </p>
+
+      <p>
+		<a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('newtalk') %]" role="button">Submit a Talk</a>
+	  </p> 
+    </div>   
+  </div>
+</div>
