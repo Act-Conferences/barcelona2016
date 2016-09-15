@@ -1,3 +1,12 @@
+.login-form::before {
+  content: inherit;
+}
+
+.checkbox input{
+  display: block;
+  margin-top: 2px;
+}
+
 a {
   font-weight: bold;
 }
