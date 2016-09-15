@@ -26,32 +26,45 @@
             <ul class="dropdown-menu">
               <li class="menuItem"><a href="[% make_uri('main') %]">My page</a></li>
               <li class="menuItem"><a href="[% make_uri('logout') %]">Logout</a></li>
+              [% IF global.request.user.is_users_admin %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('export') %]">{{CSV export}} </a></li>
+                <li><a href="[% make_uri('search') %]">{{Search}}</a></li>
+                <li><a href="[% make_uri('stats') %]">{{Statistics}}</a></li>
+                <li><a href="[% make_uri('confirm_attend') %]">{{Confirm Attendance}}</a></li>
+                <li><a href="[% make_uri('create') %]">{{Register a new user}}</a></li>
+              [% END %]
+
+              [% IF global.request.user.is_talks_admin %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('talks') %]">{{Presentations}}</a></li>
+                <li><a href="[% make_uri('schedule') %]">{{Schedule}}</a></li>
+                <li><a href="[% make_uri('timetable.ics') %]">{{iCal export}}</a></li>
+                <li><a href="[% make_uri('tracks') %]">{{Tracks}}</a></li>
+                <li><a href="[% make_uri('ical_import') %]">{{iCal import}}</a></li>
+                <li><a href="[% make_uri('export_talks') %]">{{CSV export}}</a></li>
+
+                [%# Events menu %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('events') %]">{{Events}}</a></li>
+                <li><a href="[% make_uri('newevent') %]">{{Submit a new event}}</a></li>
+              [% END %]
+
+              [% IF global.request.user.is_treasurer %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('payments') %]">{{Payments}}</a></li>
+                <li><a href="[% make_uri('csv/payments') %]">{{Payments}} (CSV)</a></li>
+                <li><a href="[% make_uri('csv/payment_items') %]">{{Payment Details}} (CSV)</a></li>
+              [% END %]
+
+              [% IF global.request.user.is_admin %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('rights') %]"> {{Rights management}} </a><li>
+              [% END %]
             </ul>
           </li>
         [% ELSE %]
           <li class="menuItem"><a href="[% make_uri('main') %]">{{Log in}}</a></li>
-        [% END %]
-
-        [% IF global.request.user.is_users_admin %]
-          <li class="divider"></li>
-          <li><a href="[% make_uri('export') %]">{{CSV export}} </a></li>
-          <li><a href="[% make_uri('confirm_attend') %]">{{Confirm Attendance}}</a></li>
-          <li><a href="[% make_uri('create') %]">{{Register a new user}}</a></li>
-        [% END %]
-
-        [% IF global.request.user.is_talks_admin %]
-          <li class="divider"></li>
-          <li><a href="[% make_uri('talks') %]">{{Presentations}}</a></li>
-          <li><a href="[% make_uri('schedule') %]">{{Schedule}}</a></li>
-          <li><a href="[% make_uri('timetable.ics') %]">{{iCal export}}</a></li>
-          <li><a href="[% make_uri('tracks') %]">{{Tracks}}</a></li>
-          <li><a href="[% make_uri('ical_import') %]">{{iCal import}}</a></li>
-          <li><a href="[% make_uri('export_talks') %]">{{CSV export}}</a></li>
-
-          [%# Events menu %]
-          <li class="divider"></li>
-          <li><a href="[% make_uri('events') %]">{{Events}}</a></li>
-          <li><a href="[% make_uri('newevent') %]">{{Submit a new event}}</a></li>
         [% END %]
   	  </ul>
   	</div>
