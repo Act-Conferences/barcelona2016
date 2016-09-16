@@ -1,0 +1,86 @@
+.login-form::before {
+  content: inherit;
+}
+
+.checkbox input{
+  display: block;
+  margin-top: 2px;
+}
+
+a {
+  font-weight: bold;
+}
+
+.footer-banner a {
+  text-decoration: none;
+}
+
+.hearth {
+  color: #e74c3c;
+}
+.content-section-b .well {
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+}
+
+.panel {
+  border-radius: 0;
+  border: 0;
+}
+
+.panel-heading {
+  border-radius: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.panel-section-c .panel-heading {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: #fff;
+}
+
+.panel .table td {
+  padding: 20px;
+}
+
+.sponsor-space {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+a.sponsor {
+  display: block;
+  background-image: url("../img/sponsors-2015.png");
+  background-repeat: no-repeat;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 275px;
+  height: 100px;
+  border: 0;
+  text-decoration: none;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+a.sponsor:hover {
+  background-image: url("../img/sponsors-2015.png");
+  opacity: 1;
+}
+
+.sponsor.sysdivision {
+  background-position: 0 8px;
+}
+
+.sponsor.soysuper {
+  background-position: 0 -98px;
+}
+
+.sponsor.capside {
+  background-position: 0 -198px;
+}
+
+.sponsor.upc {
+  background-position: 0px -300px;
+}

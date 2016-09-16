@@ -1,0 +1,20 @@
+<div class="container sponsor-container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-1 wow fadeInLeftBig"  data-animation-delay="200">   
+        <div class="sponsor-space">
+          <a href="http://capside.com" alt="Capside" class="sponsor capside"></a>
+          <a href="https://soysuper.com" alt="Soysuper.com" class="sponsor soysuper"></a>
+          <a href="https://sysdivision.com" alt="Sysdivision" class="sponsor sysdivision"></a>
+        </div>
+    </div>
+    <div class="col-sm-5 col-sm-offset-1 wow fadeInRightBig">
+      <h2 class="section-heading">Thanks to our sponsors</h2>
+      <p class="lead">
+        Remember this is a free event and we make no money. But we do need to pay suppliers. So, do you want to be a sponsor?
+      </p>
+      <p class="lead">
+        Send an email to <b><a class="text-danger" href="mailto:workshop2016@perl.cat">workshop2016@perl.cat</a></b>.
+      </p>
+    </div>
+  </div>
+</div>

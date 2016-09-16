@@ -1,25 +1,72 @@
-<div class="container">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-options">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="[% make_uri %]">[% global.conference.name %]</a>
-  </div>
+<nav class="navbar-default" role="navigation">
+  <div class="container">
+  	<div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="[% make_uri() %]#home">Barcelona Perl Workshop</a>
+  	</div>
 
-  <div class="collapse navbar-collapse" id="nav-menu-options">
-    <ul class="nav navbar-nav">
-      [% PROCESS menus/news %]
-      [% PROCESS menus/talks %]
-      [% PROCESS menus/users %]
-      [% PROCESS menus/wiki %]
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      [% PROCESS menus/language %]
-      [% PROCESS menus/user %]
-    </ul>
+  	<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="menuItem"><a href="[% make_uri('coc.html') %]">Code of Conduct</a></li>
+        <li class="menuItem"><a href="[% make_uri() %]#talks">Talks</a></li>
+        <li class="menuItem"><a href="[% make_uri() %]#sponsors">Sponsors</a></li>
+        <li class="menuItem"><a href="[% make_uri() %]#venue">Venue</a></li>
+        [% IF global.request.user %]
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="fa fa-user"></span>
+              <span class="hidden-sm hidden-md">[% global.request.user.login %]</span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="menuItem"><a href="[% make_uri('main') %]">My page</a></li>
+              <li class="menuItem"><a href="[% make_uri('logout') %]">Logout</a></li>
+              [% IF global.request.user.is_users_admin %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('export') %]">{{CSV export}} </a></li>
+                <li><a href="[% make_uri('search') %]">{{Search}}</a></li>
+                <li><a href="[% make_uri('stats') %]">{{Statistics}}</a></li>
+                <li><a href="[% make_uri('confirm_attend') %]">{{Confirm Attendance}}</a></li>
+                <li><a href="[% make_uri('create') %]">{{Register a new user}}</a></li>
+              [% END %]
+
+              [% IF global.request.user.is_talks_admin %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('talks') %]">{{Presentations}}</a></li>
+                <li><a href="[% make_uri('schedule') %]">{{Schedule}}</a></li>
+                <li><a href="[% make_uri('timetable.ics') %]">{{iCal export}}</a></li>
+                <li><a href="[% make_uri('tracks') %]">{{Tracks}}</a></li>
+                <li><a href="[% make_uri('ical_import') %]">{{iCal import}}</a></li>
+                <li><a href="[% make_uri('export_talks') %]">{{CSV export}}</a></li>
+
+                [%# Events menu %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('events') %]">{{Events}}</a></li>
+                <li><a href="[% make_uri('newevent') %]">{{Submit a new event}}</a></li>
+              [% END %]
+
+              [% IF global.request.user.is_treasurer %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('payments') %]">{{Payments}}</a></li>
+                <li><a href="[% make_uri('csv/payments') %]">{{Payments}} (CSV)</a></li>
+                <li><a href="[% make_uri('csv/payment_items') %]">{{Payment Details}} (CSV)</a></li>
+              [% END %]
+
+              [% IF global.request.user.is_admin %]
+                <li class="divider"></li>
+                <li><a href="[% make_uri('rights') %]"> {{Rights management}} </a><li>
+              [% END %]
+            </ul>
+          </li>
+        [% ELSE %]
+          <li class="menuItem"><a href="[% make_uri('main') %]">{{Log in}}</a></li>
+        [% END %]
+  	  </ul>
+  	</div>
   </div>
-</div>
+</nav> 
