@@ -1,17 +1,10 @@
 <div class="container sponsor-container">
   <div class="row">
-    <div class="col-sm-3 wow fadeInLeftBig"  data-animation-delay="200">   
+    <div class="col-sm-4 col-sm-offset-1 wow fadeInLeftBig"  data-animation-delay="200">   
         <div class="sponsor-space">
-          <a href="https://soysuper.com" alt="Soysuper.com" class="sponsor soysuper"></a>
           <a href="http://capside.com" alt="Capside" class="sponsor capside"></a>
-          <a href="https://sysdivision.com" alt="Sysdivision" class="sponsor sysdivision"></a>
-        </div>
-    </div>
-    <div class="col-sm-3 wow fadeInLeftBig"  data-animation-delay="200">   
-        <div class="sponsor-space">
-          <a href="https://sysdivision.com" alt="Sysdivision" class="sponsor sysdivision"></a>
           <a href="https://soysuper.com" alt="Soysuper.com" class="sponsor soysuper"></a>
-          <a href="http://capside.com" alt="Capside" class="sponsor capside"></a>
+          <a href="https://sysdivision.com" alt="Sysdivision" class="sponsor sysdivision"></a>
         </div>
     </div>
     <div class="col-sm-5 col-sm-offset-1 wow fadeInRightBig">
