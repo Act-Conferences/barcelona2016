@@ -1,0 +1,17 @@
+<div class="row content">
+  <div class="col-sm-8 col-sm-offset-2 wow fadeInDown text-justify">
+    <p class="lead">
+      Yes! it's this time of the year again. <a class="white" href="http://barcelona.pm">Barcelona.pm</a>
+      will host another edition of the Barcelona Perl Workshop, a one day tech conference
+      with plenty of talks about Perl and other technologies.
+    </p>
+    <p class="lead">
+      Oh! and it's <b>free</b> to attend! You just need to sign in with your Act user
+      (or create a new one if you don't have one) and register for the conference.
+      There are limited places, so better hurry up!
+    </p>
+    <p class="text-center">
+      <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('register') %]" role="button">Register!</a>
+    </p>
+  </div>
+</div>
