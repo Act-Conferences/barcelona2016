@@ -15,9 +15,10 @@
       <img  class="rotate" src="img/icon/laptop.svg" alt="Generic placeholder image">
       <h3>Perl</h3>
       <p class="lead2">
-        But not limited to Perl: we welcome attendees and speakers from any
-        <u data-toggle="tooltip" title="Web Developers, Data Scientists, Makers, Biologists...">Profession</u>
-        or <u data-toggle="tooltip" title="JavaScript, PHP, Ruby, Python, C, Java, Smalltalk...">Programming language community</u>.
+        But not limited to Perl: we welcome <a href="[% make_uri('register') %]">attendees</a>
+		and <a href="[% make_uri('newtalk') %]">speakers</a> from any
+        <u data-toggle="tooltip" title="Web Developers, Data Scientists, Makers, Biologists...">profession</u>
+        or <u data-toggle="tooltip" title="JavaScript, PHP, Ruby, Python, C, Java, Smalltalk...">programming language community</u>.
         All <u data-toggle="tooltip" title="Male, Female, Gay, Lesbian, Trans and all the ones we don't know about">sexes and sex orientations</u>,
         sizes and <u data-toggle="tooltip" title="0-122. We're sorry if you just hit 123">ages</u>. You only need to
         follow our <a href="[% make_uri('coc.html') %]">Code of Conduct</a>.
