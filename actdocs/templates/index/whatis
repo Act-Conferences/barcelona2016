@@ -3,43 +3,35 @@
     <div class="col-sm-4 wow fadeInDown text-center">
       <img class="rotate" src="img/icon/map.svg" alt="Generic placeholder image">
       <h3>Barcelona</h3>
-      <p class="lead">
-		The place to be.
-	  </p>
+      <p class="lead2">
+        Not only Barcelona, but the very center: Saturday Nov 5th. Plaça Catalunya 1 3D.
+      </p>
+      <p class="lead2">
+        Get there by <a href="https://www.google.es/maps/dir/Terminal+T1,+El+Prat+de+Llobregat/CAPSiDE,+Barcelona/@41.3365848,2.0440368,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x12a49e71d94a68c3:0x4135e11f17bbdf78!2m2!1d2.0746423!2d41.289182!1m5!1m1!1s0x12a4a27c6193b1a7:0x60a6240b19be359b!2m2!1d2.16937!2d41.386066">Plane</a>, <a href="https://www.google.es/maps/dir/Estaci%C3%B3n+de+Barcelona+Sants,+Carrer+del+Rector+Triad%C3%B3,+Barcelona/CAPSiDE,+Barcelona/@41.3823556,2.1463693,15z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x12a49880d4cf5639:0x3a7c2d44a50f178f!2m2!1d2.1401328!2d41.3790928!1m5!1m1!1s0x12a4a27c6193b1a7:0x60a6240b19be359b!2m2!1d2.16937!2d41.386066">Train</a>, <a href="https://www.tmb.cat/">Bus</a>, <a href="http://www.fgc.cat/cat/index.asp">FCC</a> or <a href="https://www.tmb.cat/">Metro</a>. The event is <b>FREE</b>
+      </p>
     </div>
-        
+
     <div class="col-sm-4 wow fadeInDown text-center">
       <img  class="rotate" src="img/icon/laptop.svg" alt="Generic placeholder image">
-       <h3>Perl</h3>
-       <p class="lead">
-		Yes! But not only Perl.
-	   </p>
-    </div>        
+      <h3>Perl</h3>
+      <p class="lead2">
+        But not limited to Perl: we welcome <a href="[% make_uri('register') %]">attendees</a>
+		and <a href="[% make_uri('newtalk') %]">speakers</a> from any
+        <u data-toggle="tooltip" title="Web Developers, Data Scientists, Makers, Biologists...">profession</u>
+        or <u data-toggle="tooltip" title="JavaScript, PHP, Ruby, Python, C, Java, Smalltalk...">programming language community</u>.
+        All <u data-toggle="tooltip" title="Male, Female, Gay, Lesbian, Trans and all the ones we don't know about">sexes and sex orientations</u>,
+        sizes and <u data-toggle="tooltip" title="0-122. We're sorry if you just hit 123">ages</u>. You only need to
+        follow our <a href="[% make_uri('coc.html') %]">Code of Conduct</a>.
+      </p>
+    </div>
 
     <div class="col-sm-4 wow fadeInDown text-center">
       <img class="rotate" src="img/icon/pencils.svg" alt="Generic placeholder image">
       <h3>Workshop</h3>
-      <p class="lead">
-		Sort of. It's a one-day conference.
-	  </p>
-    </div>
-  </div>
-
-  <div class="row well">
-    <div class="col-sm-8 col-sm-offset-2 wow fadeInDown text-justify">
-	  <p class="lead">
-		Yes, it's this time of the year again. <a href="http://barcelona.pm">Barcelona.pm</a>
-		will host another edition of the Barcelona Perl Workshop, a one day tech conference
-		with plenty of talks about Perl and other technologies.
-	  </p>
-	  <p class="lead">
-		Oh! and it's <b>free</b> to attend! You just need to sign in with your Act user
-		(or create a new one if you don't have one) and register for the conference.
-		There are limited places, so better hurry up!
-	  </p>
-      <p class="text-center">
-		<a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('register') %]" role="button">Register!</a>
-	  </p> 
+      <p class="lead2">
+        Sort of. It's more like one-day conference. Talks, tracks, networking, meeting old and
+        new friends, and overall: having fun. Show us your awesome tools and projects. We'll share ours.
+      </p>
     </div>
   </div>
 </div>
