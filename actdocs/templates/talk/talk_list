@@ -44,7 +44,7 @@
           </div>
 
           <div class="col-md-7 abstract">
-            [% t.abstract.substr(0,350) %][% IF t.abstract.length > 350 %]...[% END %]
+            [% dotdotdot(t.abstract, 350) %]
           </div>
 
           <div class="col-md-1 actions">
