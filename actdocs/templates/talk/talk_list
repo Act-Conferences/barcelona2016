@@ -19,7 +19,7 @@
             <h4 clas="title">[% talk_link(t) %]</h4>
 
             <div class="user">
-              [% user_info(t.user) %]
+              <b>[% user_info_base(t.user) %]</b>
             </div>
 
             <span class="duration">
