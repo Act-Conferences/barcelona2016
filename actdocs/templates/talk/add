@@ -1,4 +1,10 @@
-[% WRAPPER ui title = loc("Submit/Edit a talk") %]
+[% IF talk_id %]
+  [% page_title = "Edit talk" %]
+[% ELSE %]
+  [% page_title = "Submit a talk" %]
+[% END %]
+
+[% WRAPPER ui title = page_title %]
 
   [% PROCESS error
      msgs = {
@@ -17,6 +23,9 @@
     }
   %]
 
+  <div class="col-sm-12 wrap_title text-center">
+    <h2>[% page_title %]</h2>
+  </div>
   <form method="POST" class="form-horizontal" role="form" action="[% global.request.r.uri %]">
     [% IF return_url %]
       <input type="hidden" name="return_url" value="[% return_url %]" />
@@ -218,7 +227,7 @@
         <div class="form-group">
           [% IF tracks.size != 0 %]
             [% IF global.request.user.is_talks_admin %]
-              <label for="track_id" class="col-sm-2 control-label">{{Track}}</label>
+              <label for="track_id" class="col-sm-3 control-label">{{Track}}</label>
               <div class="col-sm-2">
                <select name="track_id" class="form-control">
                  <option value=""[% ' selected="selected"' UNLESS track_id %] />
