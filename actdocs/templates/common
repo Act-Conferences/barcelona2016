@@ -1,4 +1,10 @@
-[%  MACRO talk_link(talk)
+[%  MACRO dotdotdot(string, limit)
+    BLOCK;
+        %]
+        [% string.substr(0, limit) %][% IF string.length > limit %]...[% END %]
+[%- END;
+
+    MACRO talk_link(talk)
     BLOCK;
         %]<a href="[% make_uri_info( 'talk', talk.talk_id ) %]">
             [%- "<b>" IF talk.accepted %]&lrm;[% talk.title %]&lrm;[% "</b>" IF talk.accepted %]</a>

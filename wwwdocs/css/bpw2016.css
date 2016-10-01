@@ -68,6 +68,67 @@ a {
   margin-top: 30px;
 }
 
+.talks-table {
+  margin-bottom: 120px;
+}
+
+.talks-table thead tr th {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+}
+
+.talks-table .talk .abstract {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.talks-table .talk .actions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.talks-table .talk .status {
+  margin-bottom: 1em;
+}
+
+.talk-widget .abstract {
+  text-align: justify;
+}
+
+.user-widget {
+  margin-top: 30px;
+}
+
+.user-widget-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: center;
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: #fff;
+  padding: 20px;
+}
+
+.user-widget-header .img-rounded {
+  border-radius: 200px;
+}
+
+.user-widget-header .name {
+  font-weight: bold;
+}
+
+.user-widget-body {
+  background-color: #f8f8f8;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.user-widget-body .table tr td {
+  border-top: 1px solid #ecf0f1;
+}
+
 a.sponsor {
   display: block;
   background-image: url("../img/sponsors-2015.png");
@@ -101,4 +162,27 @@ a.sponsor:hover {
 
 .sponsor.upc {
   background-position: 0px -300px;
+}
+
+#htmltagcloud {
+  margin-top: 30px;
+  line-height: 4 !important;
+}
+
+#htmltagcloud span {
+  background-color: #48c9b0;
+  border-color: #48c9b0;
+  margin: 0 10px;
+  display: inline;
+  padding: .2em .6em .3em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+#htmltagcloud span a{
+  color: #fff;
 }

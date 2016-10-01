@@ -13,7 +13,7 @@
   	<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         <li class="menuItem"><a href="[% make_uri('coc.html') %]">Code of Conduct</a></li>
-        <li class="menuItem"><a href="[% make_uri() %]#talks">Talks</a></li>
+        <li class="menuItem"><a href="[% make_uri('talks') %]">Talks</a></li>
         <li class="menuItem"><a href="[% make_uri() %]#sponsors">Sponsors</a></li>
         <li class="menuItem"><a href="[% make_uri() %]#venue">Venue</a></li>
         [% IF global.request.user %]
