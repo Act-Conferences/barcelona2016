@@ -1,3 +1,16 @@
+.navbar-brand {
+  font-size: 18px !important;
+}
+
+.h1_home {
+  font-size: 50px !important;
+}
+
+.navbar-toggle {
+  margin: 0;
+  padding: 0 21px 0 0;
+}
+
 u {
   text-decoration-style: dotted;
   cursor: pointer;
