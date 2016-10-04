@@ -10,9 +10,7 @@
     <meta property="og:title" content="[% IF title %][% title %][% ELSE %][% global.conference.name %][% END %]" />
     <meta property="og:url" content="[% global.request.base_url %][% global.request.r.uri %]" />
     <meta property="og:description" content="[% IF description %][% description %][% ELSE %]A free one-day conference for Perl geeks and friends.[% END %]" />
-    <!-- TODO: new og-image needed
     <meta property="og:image" content="[% global.request.base_url %][% make_uri_info('img', 'og-image.jpg') %]" />
-    -->
     <!-- OpenId -->
     [% IF openid %]
     <link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
