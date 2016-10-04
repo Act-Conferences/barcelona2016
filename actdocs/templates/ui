@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Language" content="[% global.request.language %]" />
+		<meta name="twitter:card" content="summary" />
     <meta property="og:site_name" content="[% global.conference.name %]"/>
     <meta property="og:title" content="[% IF title %][% title %][% ELSE %][% global.conference.name %][% END %]" />
     <meta property="og:url" content="[% global.request.base_url %][% global.request.r.uri %]" />
-    <meta property="og:description" content="A free one-day conference for Perl geeks and friends." />
+    <meta property="og:description" content="[% IF description %][% description %][% ELSE %]A free one-day conference for Perl geeks and friends.[% END %]" />
     <!-- TODO: new og-image needed
     <meta property="og:image" content="[% global.request.base_url %][% make_uri_info('img', 'og-image.jpg') %]" />
     -->

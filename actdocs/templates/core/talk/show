@@ -1,110 +1,46 @@
-[% INCLUDE js/mytalks.js %]
-
 <div class="row">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <div class="col-md-6 form-horizontal">
-        <div class="form-group">
-          <label class="col-xs-3 control-label">{{By}}:</label>
-          <div class="col-xs-9">
-            <p class="form-control-static">
-              [% user_info(user) %]
-              [% IF global.request.user.is_talks_admin || global.request.user.user_id == user_id %]
-                (<a href="[% make_uri('edittalk', 'talk_id', talk_id) %]">{{edit}}</a>)
-              [% END %]
-            </p>
-          </div>
-        </div>
-
-        [% IF user.pm_group %]
-          <div class="form-group">
-            <label class="col-xs-3 control-label">[% loc('from').ucfirst %]:</label>
-            <div class="col-xs-9 ">
-              <p class="form-control-static">
-                [% IF user.pm_group_url %]
-                  <a href="[% user.pm_group_url %]">[% user.pm_group %]</a>
-                [% ELSE %]
-                  [% user.pm_group %]
-                [% END %]
-              </p>
-            </div>
-          </div>
-        [% END %]
-
-        <div class="form-group">
-          <label class="col-xs-3 control-label">{{Date:}}</label>
-          <div class="col-xs-9 ">
-            <p class="form-control-static">
-              [% IF datetime && ( global.config.talks_show_schedule || global.request.user.is_talks_admin ) %]
-                <a href="[% make_uri( 'schedule?day=' _ date_format(datetime, 'date_iso') ) %]" >
-                  [% date_format(datetime, 'date_full') %]
-                </a>
-                [% date_format(datetime, 'time' ) %]
+  <div class="col-sm-7 wow fadeInLeftBig talk-widget"  data-animation-delay="200">   
+    <h2>[% title %]</h2>
+            <p class="">
+              [% IF t.confirmed %]
+              <span class="label label-success">{{confirmed}}</span>
+              [% ELSIF t.accepted %]
+              <span class="label label-info">{{Accepted}}</span>
               [% ELSE %]
-                {{Not scheduled yet.}}
+              <span class="label label-warning">{{Pending}}</span>
               [% END %]
+              [% showtags(tags, 'talks') %]
             </p>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="col-xs-3 control-label">{{Duration:}}</label>
-          <div class="col-xs-9 ">
-            <p class="form-control-static">
+            <span class="duration">
               [% IF lightning %]
-                {{Lightning talk}}
+                {{lightning}}
               [% ELSE %]
                 [% duration %] {{minutes}}
               [% END %]
-            </p>
-          </div>
-        </div>
+            </span>
 
+            <span class="language">
+              [% IF global.config.talks_languages %]
+                - [% global.config.talks_languages.${lang} %]
+              [% END %]
+            </span>
+
+            <span class="date">
+              [% IF global.request.user.is_talks_admin OR global.config.talks_show_schedule %]
+                [% IF datetime %] - [% date_format(datetime, 'datetime_short');ELSE; '&nbsp;'; END %]
+              [% END %]
+            </span>
         [% IF global.config.talks_levels %]
-          <div class="form-group">
-            <label class="col-xs-3 control-label">{{Target audience:}}</label>
-            <div class="col-xs-9 ">
-              <p class="form-control-static">
-                [% level %]
-              </p>
-            </div>
+          <div class="">
+            Level: [% level %]
           </div>
         [% END %]
+    <p class="lead2 abstract">
+      [% expand(chunked_abstract) | html_line_break %]&nbsp;
+    </p>
 
-        [% IF global.config.talks_languages %]
-          <div class="form-group">
-            <label class="col-xs-3 control-label">{{Language:}}</label>
-            <div class="col-xs-9 ">
-              <p class="form-control-static">
-                [% global.config.talks_languages.$lang %]&nbsp;
-              </p>
-            </div>
-          </div>
-        [% END %]
-
-        [% IF ( global.request.user.is_talks_admin || global.request.user.user_id == user_id) AND comment %]
-          <div class="form-group">
-            <label class="col-xs-3 control-label">{{Comment:}}</label>
-            <div class="col-xs-9 ">
-              <p class="form-control-static">
-                [% comment %]
-              </p>
-            </div>
-          </div>
-        [% END %]
-
-        <div class="form-group">
-          <label class="col-xs-3 control-label">{{Abstract:}}</label>
-          <div class="col-xs-9 ">
-            <p class="form-control-static">
-              [% expand(chunked_abstract) | html_line_break %]&nbsp;
-            </p>
-          </div>
-        </div>
-
+    <p>
         [% IF url_abstract || url_talk %]
-          <div class="form-group">
-            <div class="col-xs-9 col-xs-offset-3">
               [
               [% IF url_abstract %]
                 <a href="[% url_abstract %]">{{abstract (link)}}</a>
@@ -114,70 +50,140 @@
                 <a href="[% url_talk %]">{{talk (link)}}</a>
               [% END %]
               ]
-            </div>
-          </div>
+        [% END %]
+    </p>
+
+        [% IF ( global.request.user.is_talks_admin || global.request.user.user_id == user_id) AND comment %]
+              <blockquote>
+                [% comment %]
+              </blockquote>
+        [% END %]
+  </div>
+  <div class="col-md-4 col-md-offset-1 col-sm-5 wow fadeInRightBig">
+    <div class="user-widget">
+      <div class="user-widget-header">
+        [%- IF user.photo_name %]
+          <img src="/[% global.config.general_dir_photos %]/[% user.photo_name %]" class="img-thumbnail" border="0" alt="Photo">
+        [%- ELSE %]
+          <img class="img-rounded" src="../img/default-avatar.png" border="0">
         [% END %]
 
-        <div class="form-group">
-          <label class="col-xs-3 control-label">{{Tags:}}</label>
-          <div class="col-xs-9 ">
-            <p class="form-control-static">
-              [% showtags(tags, 'talks') %]
-            </p>
-          </div>
-          <div class="col-xs-9 col-xs-offset-3">
-            [% IF global.request.user %]
-              <form  method="POST" action="[% global.request.r.uri %]">
-                  <div class="input-group">
-                      <input type="text" class="form-control" name="newtags" value="" length="12" maxlength="64" />
-                      <span class="input-group-btn">
-                        <button type="submit" class="btn btn-default" id="ok" name="ok" value="{{Add}}">
-                          <i class="fa fa-plus"></i>
-                        </button>
-                      </span>
-                  </div>
-              </form>
-            [% END %]
-          </div>
-        </div>
+        <p class="name lead">
+        [%- IF user.pseudonymous %]
+          [% user.nick_name %]
+        [%- ELSE %]
+          [% user.first_name %]
+          [% user.last_name %]
+          [% "(&lrm;${user.nick_name}&lrm;)" IF user.nick_name %]
+        [% END %]
+        </p>
+        [% IF user.bio.en %]
+          <p class="lead2">[% user.bio.en %]</p>
+        [% END %]
       </div>
 
-      <div class="col-md-6">
-        [% IF attendees.size %]
-          <table class="table">
-            <thead>
-              <tr><th>{{Attended by:}}</th></tr>
-            </thead>
-            <tbody>
-              [% FOREACH u IN attendees %]
-                <tr><td>[% user_info(u) %]</tr></td>
-              [% END %]
-            </tbody>
-          </table>
-        [% END %]
+      <div class="user-widget-body">
+        <table class="table">
+        <tbody>
+          [% IF global.request.user.is_staff %]
+            <tr>
+              <td>Login</td>
+              <td>[% user.login %]</td>
+            </tr>
+          [% END %]
 
-        [% IF global.request.user.has_registered %]
-          <div class="text-right">
-            <form method="POST" action="[% make_uri('updatemytalks') %]" />
-            <input type="checkbox"
-                   name="mt-[% talk_id %]"
-                   value="[% talk_id %]"
-                   [% IF global.request.user.is_my_talk(talk_id) %]
-                     title = "{{remove from personal schedule}}"
-                     checked = "checked"
-                   [% ELSE %]
-                     title = "{{add to personal schedule}}"
-                   [% END %]
-            />
-            <span id="my-[% talk_id %]-text">{{add to personal schedule}}</span>
-            <input type="hidden" name="talk_id" value="[% talk_id %]" />
-            <input type="submit" class="mytalks_submit btn btn-primary" value="{{Submit}}" />
-            </form>
-          </div>
-        [% END %]
+          [% IF user.town %]
+            <tr>
+              <td>Town</td>
+              <td>[% user.town %]</td>
+            </tr>
+          [% END %]
+
+          [% IF user.country %]
+            <tr>
+              <td>Country</td>
+              <td>[% user.country %]</td>
+            </tr>
+          [% END %]
+
+          [% IF user.pm_group %]
+            <tr>
+              <td>Perl Mongers Group</td>
+              <td>
+                [% IF user.pm_group_url %]<a href="[% user.pm_group_url %]">[% user.pm_group %]</a>
+                [% ELSE %][% user.pm_group %][% END %]
+              </td>
+            </tr>
+          [% END %]
+
+          [% IF user.company %]
+            <tr>
+              <td>Company</td>
+              <td>
+                [% IF user.company_url %]<a href="[% user.company_url %]">[% user.company %]</a>
+                [% ELSE %][% user.company %][% END %]
+              </td>
+            </tr>
+          [% END %]
+
+          [% IF NOT user.email_hide OR global.request.user.is_users_admin %]
+            <tr>
+              <td>Email</td>
+              <td><a href="mailto:[% user.email %]">[% user.email %]</a></td>
+            </tr>
+          [% END %]
+
+          [% IF user.pause_id %]
+            <tr>
+              <td>PAUSE id</td>
+              <td>
+                <a href="https://metacpan.org/author/[% user.pause_id %]/" >[% user.pause_id %]</a>
+              </td>
+            </tr>
+          [% END %]
+
+          [% IF user.monk_id %]
+            <tr>
+              <td>Perlmonks id</td>
+              <td>
+                <a href="http://perlmonks.org/index.pl?node_id=[% user.monk_id %]" >[% user.monk_name OR user.monk_id %]</a>
+              </td>
+            </tr>
+          [% END %]
+
+          [% IF user.im %]
+            <tr>
+              <td>IM</td>
+              <td>[% user.im %]</td>
+            </tr>
+          [% END %]
+
+          [% IF user.gpg_key_id %]
+            <tr>
+              <td>GPG key ID</td>
+              <td>
+                <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x[% user.gpg_key_id %]">0x[% user.gpg_key_id %]</a>
+              </td>
+            </tr>
+          [% END %]
+          [% IF user.web_page %]
+            <tr>
+              <td></td>
+              <td>[ <a href="[% user.web_page %]">[% user.web_page %]</a> ]</td>
+            </tr>
+          [% END %]
+        </tbody>
+        </table>
       </div>
     </div>
-    <div class="panel-footer"><a href="[% make_uri('talks') %]">&laquo; {{List of talks}}</a></div>
+  </div>
+
+  <div class="col-xs-12">   
+    [% IF global.request.user.is_talks_admin || global.request.user.user_id == user_id %]
+      <a class="btn btn-hg btn-inverse" href="[% make_uri('edittalk', 'talk_id', talk_id) %]">
+        Edit Talk
+      </a>
+    [% END %]
   </div>
 </div>
 

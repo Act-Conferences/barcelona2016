@@ -39,7 +39,7 @@ to restart apache:
     vagrant@lucid32:~ httpd -f ~/Act/httpd.conf
 
 
-Then you should open http://localhost:8080/ye2015/ and see the
+Then you should open http://localhost:8080/barcelona2016/ and see the
 Act instance on your computer.
 
 
