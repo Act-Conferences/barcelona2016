@@ -10,9 +10,7 @@
     <meta property="og:title" content="[% IF title %][% title %][% ELSE %][% global.conference.name %][% END %]" />
     <meta property="og:url" content="[% global.request.base_url %][% global.request.r.uri %]" />
     <meta property="og:description" content="[% IF description %][% description %][% ELSE %]A free one-day conference for Perl geeks and friends.[% END %]" />
-    <!-- TODO: new og-image needed
     <meta property="og:image" content="[% global.request.base_url %][% make_uri_info('img', 'og-image.jpg') %]" />
-    -->
     <!-- OpenId -->
     [% IF openid %]
     <link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
@@ -22,7 +20,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="[% make_uri_info('img', 'favicon.png') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'general.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
