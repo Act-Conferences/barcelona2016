@@ -63,7 +63,7 @@
     <div class="user-widget">
       <div class="user-widget-header">
         [%- IF user.photo_name %]
-          <img src="/[% global.config.general_dir_photos %]/[% user.photo_name %]" class="img-thumbnail" border="0" alt="Photo">
+          <img src="/[% global.config.general_dir_photos %]/[% user.photo_name %]" class="img-rounded" border="0" alt="Photo">
         [%- ELSE %]
           <img class="img-rounded" src="../img/default-avatar.png" border="0">
         [% END %]
