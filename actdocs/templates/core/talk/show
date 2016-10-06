@@ -2,9 +2,9 @@
   <div class="col-sm-7 wow fadeInLeftBig talk-widget"  data-animation-delay="200">   
     <h2>[% title %]</h2>
             <p class="">
-              [% IF t.confirmed %]
+              [% IF confirmed %]
               <span class="label label-success">{{confirmed}}</span>
-              [% ELSIF t.accepted %]
+              [% ELSIF accepted %]
               <span class="label label-info">{{Accepted}}</span>
               [% ELSE %]
               <span class="label label-warning">{{Pending}}</span>
