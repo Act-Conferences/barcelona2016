@@ -1,3 +1,7 @@
-[% WRAPPER ui title = title description = dotdotdot(abstract, 350) %]
+[% WRAPPER ui
+  title = title
+  description = dotdotdot(abstract, 350)
+  photo = user.photo_name
+%]
   [% PROCESS core/talk/show %]
 [% END %]
