@@ -129,39 +129,51 @@ a {
   border-top: 1px solid #ecf0f1;
 }
 
+.sponsor-space {
+  text-align: center;
+  margin: 50px 0;
+}
+
 a.sponsor {
-  display: block;
-  background-image: url("../img/sponsors-2015.png");
+  display: inline-block;
+  background-image: url("../img/sponsors/2016.png");
   background-repeat: no-repeat;
   text-indent: -9999em;
   overflow: hidden;
-  width: 275px;
+  width: 303px;
   height: 100px;
   border: 0;
   text-decoration: none;
   opacity: 1;
-  margin-bottom: 20px;
-}
-
-a.sponsor:hover {
-  background-image: url("../img/sponsors-2015.png");
-  opacity: 1;
+  margin: 0 20px 20px 20px;
 }
 
 .sponsor.sysdivision {
-  background-position: 0 8px;
+  background-position: 13px 8px;
 }
 
 .sponsor.soysuper {
-  background-position: 0 -98px;
+  background-position: 13px -98px;
 }
 
 .sponsor.capside {
-  background-position: 0 -198px;
+  background-position: 13px -198px;
 }
 
-.sponsor.upc {
-  background-position: 0px -300px;
+.sponsor.ascii164 {
+  background-image: url("../img/sponsors/ascii164.png");
+  height: 128px;
+  background-position: 86px 0;
+}
+
+.sponsor.booking {
+  background-image: url("../img/sponsors/booking.png");
+  background-position: 0 20px;
+}
+
+.sponsor.vintegris {
+  background-image: url("../img/sponsors/vintegris.png");
+  background-position: 4px 0;
 }
 
 #htmltagcloud {
