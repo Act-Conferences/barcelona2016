@@ -21,12 +21,12 @@
       </p>
 
       <p class="lead">
-		    Stay tunned, we'll start publishing the first talks shortly.
+        We already have some <a href="[% make_uri('talks') %]">talks</a> approved.
       </p>
 
-      <p>
-		    <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('newtalk') %]" role="button">Submit a Talk</a>
-	    </p> 
+      <p class="text-center">
+		<a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('newtalk') %]" role="button">Submit a Talk</a>
+	  </p> 
       <p class="lead">
         You have until the <b>26th of October</b> to submit regular talk proposals.
         But it's possible to send lightning talk proposals after the deadline!
