@@ -9,9 +9,12 @@
       Oh! and it's <b>free</b> to attend! You just need to sign in with your Act user
       (or create a new one if you don't have one) and register for the conference.
       There are limited places, so better hurry up!
+      (Everyone registered before the 20th of October will also get a <b>free t-shirt</b>)
     </p>
     <p class="text-center">
       <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('register') %]" role="button">Register!</a>
+    </p>
+    <p class="lead text-center">
     </p>
   </div>
 </div>
