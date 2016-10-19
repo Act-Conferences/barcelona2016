@@ -153,11 +153,12 @@ a.sponsor {
 }
 
 .sponsor.soysuper {
-  background-position: 13px -98px;
+  background-image: url("../img/sponsors/soysuper.png");
+  height: 140px;
 }
 
 .sponsor.capside {
-  background-position: 13px -198px;
+  background-position: 13px -204px;
 }
 
 .sponsor.ascii164 {
@@ -168,7 +169,7 @@ a.sponsor {
 
 .sponsor.booking {
   background-image: url("../img/sponsors/booking.png");
-  background-position: 0 20px;
+  background-position: 0 14px;
 }
 
 .sponsor.vintegris {
