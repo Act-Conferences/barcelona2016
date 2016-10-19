@@ -7,10 +7,10 @@
       <div class="sponsor-space">
         <a href="http://capside.com" alt="Capside" class="sponsor capside"></a>
         <a href="https://booking.com" alt="Booking.com" class="sponsor booking"></a>
-        <a href="https://soysuper.com" alt="Soysuper.com" class="sponsor soysuper"></a>
-        <a href="https://sysdivision.com" alt="Sysdivision" class="sponsor sysdivision"></a>
-        <a href="http://ascii164.com" alt="ascii164" class="sponsor ascii164"></a>
         <a href="http://www.vintegris.tech/" alt="Víntegris" class="sponsor vintegris"></a>
+        <a href="https://sysdivision.com" alt="Sysdivision" class="sponsor sysdivision"></a>
+        <a href="https://soysuper.com" alt="Soysuper.com" class="sponsor soysuper"></a>
+        <a href="http://ascii164.com" alt="ascii164" class="sponsor ascii164"></a>
       </div>
     </div>
     <div class="col-xs-12 wow fadeInRightBig text-center">
