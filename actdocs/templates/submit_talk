@@ -5,33 +5,25 @@
     </div>
         
     <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
-      <h2 class="section-heading">Submit a talk!</h2>
+      <h2 class="section-heading">Schedule</h2>
+
       <div class="sub-title lead3">
-	  	We're finishing up the schedule, but there's still time to submit talks
-	  </div>
+        We're finishing up the schedule, but meanwhile you can have a look at
+        the <a href="[% make_uri('talks') %]">talks</a> we already approved.
+      </div>
+
       <p class="lead">
-        We'll have some really good and experienced speakers but we'd really 
-        <span class="hearth">♥</span> to give the opportunity to more people to talk
-        about something they like.
+        We don't accept any more regular talk proposals, but we encorage you
+        to submit a <a href="[% make_uri('talk') %]/6961">lightning talk</a>.
       </p>
 
       <p class="lead">
-        You might think that you have nothing to talk about. Think twice. What you
-        take for granted might be unknown for others. 
-      </p>
-
-      <p class="lead">
-		    Stay tunned, we'll start publishing the first talks shortly.
+        We'll be accepting lightning talks until last minute!
       </p>
 
       <p>
-		    <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('newtalk') %]" role="button">Submit a Talk</a>
-	    </p> 
-      <p class="lead">
-        You have until the <b>26th of October</b> to submit regular talk proposals.
-        But it's possible to send lightning talk proposals after the deadline!
-      </p>
-
-    </div>   
+	    <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('newtalk') %]" role="button">Submit a Lightning Talk</a>
+	  </p>
+    </div>  
   </div>
 </div>
