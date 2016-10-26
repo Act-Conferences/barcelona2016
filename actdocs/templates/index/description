@@ -6,12 +6,8 @@
       with plenty of talks about Perl and other technologies.
     </p>
     <p class="lead">
-      Oh! and it's <b>free</b> to attend! You just need to sign in with your Act user
-      (or create a new one if you don't have one) and register for the conference.
-      There are limited places, so better hurry up!
-    </p>
-    <p class="text-center">
-      <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('register') %]" role="button">Register!</a>
+      We've reached the limit of users for this edition! If you didn't make it you can follow
+      <a class="white" href="https://twitter.com/barcelonapm">@barcelonapm</a> for next events.
     </p>
   </div>
 </div>
