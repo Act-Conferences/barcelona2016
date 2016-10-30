@@ -199,3 +199,53 @@ a.sponsor {
 #htmltagcloud span a{
   color: #fff;
 }
+/*~------------------------------------------------------------------*/
+/* Timetable colours                                                 */
+/*~------------------------------------------------------------------*/
+.table-schedule {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  background-color: #ecf0f1;
+}
+.table-schedule th {
+  text-align: center;
+  font-size: 1.2em;
+}
+.table-schedule td {
+  text-align: center;
+  border-top: 1px solid #fff !important;
+}
+.table-schedule td.header {
+  padding-top: 0;
+  width: 0;
+}
+.table-schedule a {
+  color: #fff;
+}
+.table-schedule .min50 {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.table-schedule .min90 {
+  padding-bottom: 3em;
+  padding-top: 3em;
+}
+.table-schedule .min180 {
+  padding-bottom: 5em;
+  padding-top: 5em;
+}
+.venue {
+  background-color: #48c9b0;
+}
+.out {
+  background-color: #48c9b0;
+}
+.r1 {
+  border-right: 1px solid #fff !important;
+  background-color: #34495e;
+  color: #fff;
+}
+.r2 {
+  background-color: #34495e;
+  color: #fff;
+}
