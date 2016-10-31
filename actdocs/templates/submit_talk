@@ -7,9 +7,9 @@
     <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
       <h2 class="section-heading">Schedule</h2>
 
-      <div class="sub-title lead3">
-        We're finishing up the schedule, but meanwhile you can have a look at
-        the <a href="[% make_uri('talks') %]">talks</a> we already approved.
+      <div class="lead">
+	Our <a href="[% make_uri('schedule') %]">Schedule</a> has been published!
+	Please have a look in advance in order to plan your day.
       </div>
 
       <p class="lead">
@@ -22,8 +22,8 @@
       </p>
 
       <p>
-	    <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('newtalk') %]" role="button">Submit a Lightning Talk</a>
-	  </p>
+        <a class="btn btn-lg btn-embossed btn-primary" href="[% make_uri('newtalk') %]" role="button">Submit a Lightning Talk</a>
+      </p>
     </div>  
   </div>
 </div>
