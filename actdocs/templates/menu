@@ -13,7 +13,18 @@
   	<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         <li class="menuItem"><a href="[% make_uri('coc.html') %]">Code of Conduct</a></li>
-        <li class="menuItem"><a href="[% make_uri('talks') %]">Talks</a></li>
+	<li class="dropdown">
+	  <a href="" class="dropdown-toggle" data-toggle="dropdown">
+	    <span class="fa fa-microphone"></span>
+	    <span class="hidden-sm hidden-md">Talks</span>
+	    <b class="caret"></b>
+	  </a>
+          <ul class="dropdown-menu">
+            <li class="menuItem"><a href="[% make_uri('talks') %]">Talk List</a></li>
+            <li class="menuItem"><a href="[% make_uri('schedule') %]">Schedule</a></li>
+            <li class="menuItem"><a href="[% make_uri('newtalk') %]">Submit a Lightning Talk</a></li>
+          </ul>
+        </li>
         <li class="menuItem"><a href="[% make_uri() %]#sponsors">Sponsors</a></li>
         <li class="menuItem"><a href="[% make_uri() %]#venue">Venue</a></li>
         [% IF global.request.user %]
