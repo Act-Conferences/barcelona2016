@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-6 pull-right wow fadeInRightBig">
+    <div class="col-sm-5 pull-right wow fadeInRightBig">
       <img class="img-responsive" width="100%" src="img/icon/mic.svg" alt="">
     </div>
         
-    <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
+    <div class="col-sm-5 wow fadeInLeftBig"  data-animation-delay="200">   
       <h2 class="section-heading">See you next year!</h2>
 
-      <div class="sub-title lead3">
+      <div class="lead">
         Barcelona Perl Workshop 2016 already happened, we're sorry if you missed it!
         Not everything is lost though, we're going to publish the videos of most of
         the talks shortly. Stay tunned!
